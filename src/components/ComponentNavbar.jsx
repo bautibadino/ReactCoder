@@ -14,7 +14,7 @@ export const ComponentNavbar = () => {
     <Navbar
       bg="black"
       variant="dark"
-      fixed="top"
+
       className="text-white d-flex flex-row p-2 align-items-center navbar justify-content-between"
     >
       <div className="logo d-flex align-items-center justify-content-center">

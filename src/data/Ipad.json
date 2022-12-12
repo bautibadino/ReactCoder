@@ -1,0 +1,28 @@
+{
+  "ipads": [
+    {
+      "name": "iPad Air",
+      "capacity": "256 GB",
+      "description": "Chip M1",
+      "year": "2022",
+      "img": " ReactCoder/imgs/ipad air.jpg",
+      "price": 810
+    },
+    {
+      "name": "iPad Pro",
+      "capacity": " 512 GB",
+      "description": "Chip M2",
+      "year": "2022",
+      "img": "ReactCoder/imgs/iPad-Pro-M2-11-grey-thumb-650x650-1-600x600.png",
+      "price": 1200
+    },
+    {
+      "name": "iPad mini",
+      "capacity": "512 GB",
+      "description": "Chip A15 Bionic",
+      "year": "2022",
+      "img": "ReactCoder/imgs/Ipad mini.jpg",
+      "price": 600
+    }
+  ]
+}

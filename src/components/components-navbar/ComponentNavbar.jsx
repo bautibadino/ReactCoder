@@ -3,17 +3,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar } from "react-bootstrap";
 import { AiOutlineApple } from "react-icons/ai";
 import { CartWidget } from "./CartWidget";
-import { ItemListContainer } from "./ItemListContainer";
-import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
-
-const Home = () => <h1>home page</h1>
-const IphonePage = () => <h1>iph page</h1>
-const IpadPage = () => <h1>ipad page</h1>
-const MacPage = () => <h1>mac page</h1>
+import { Route, Link, Routes } from "react-router-dom";
+import { IphonePage } from "../../pages/IphonePage";
+import { Home } from "../../pages/Home";
+import { MacPage } from "../../pages/MacPage";
+import { IpadPage } from "../../pages/ipadPage/IpadPage";
 
 export const ComponentNavbar = () => {
   return (
-    <BrowserRouter>
+    <>
+    
       <header>
         <Navbar
           bg="black"
@@ -21,13 +20,13 @@ export const ComponentNavbar = () => {
           className="text-white d-flex flex-row p-2 align-items-center navbar justify-content-between"
         >
           <div className="logo d-f  lex align-items-center justify-content-center">
-            <a
+            <Link
               className="d-flex align-items-center justify-content-center text-white text-decoration-none"
-              href="#inicio"
+              // to="/"
             >
               <AiOutlineApple size={"1.7em"} />
               MundoApple
-            </a>
+            </Link>
           </div>
 
           <div className="links d-flex align-items-center">
@@ -50,25 +49,19 @@ export const ComponentNavbar = () => {
       </header>
 
     <Routes>
-      <Route path="/">
-        <Home />
-      </Route>
-
-      <Route path="/iPhone">
-        <IphonePage />
-      </Route>
-
-      <Route path="/Mac">
-        <MacPage />
-      </Route>
-
-      <Route path="/iPad">
-        <IpadPage />
-      </Route>
       
+      <Route path="/" element={<Home/>}/>
+
+      <Route path="/iPhone" element={<IphonePage/>}/>
+
+      <Route path="/Mac" element={<MacPage/>}/>
+
+      <Route path="/iPad" element={<IpadPage/>}/>
+
       </Routes>
+    
+    </>
 
       
-    </BrowserRouter>
   );
 };

@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import {ItemList} from '../../pages/IpadPage/ItemList'
 
-export const ItemListContainer = ({greeting}) => {
-  
-
+export const ItemListContainer = () => {
+  const [productosFetch, setProductosFetch] = useState([]);
+  useEffect(() => {
+    fetch('../data/Ipad.json')
+      .then((res) => res.json())
+      .then((data) => setProductosFetch(data.ipads))
+      .catch((err) => console.log(err));
+  }, []);
+  console.log(productosFetch)
   return (
-    <div>
-      <h2>{greeting}</h2>
-    </div>
+    <>
+      <ItemList productosFetch={productosFetch} />
+    </>
   );
 };
-

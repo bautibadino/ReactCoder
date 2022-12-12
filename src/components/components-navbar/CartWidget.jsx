@@ -1,7 +1,6 @@
 import React from "react";
 import {AiOutlineShoppingCart} from "react-icons/ai"
 import "bootstrap/dist/css/bootstrap.min.css";
-import { ItemListContainer } from "./ItemListContainer";
 
 
 export const CartWidget = (props) => {

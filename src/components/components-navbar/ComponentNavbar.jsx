@@ -3,11 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar } from "react-bootstrap";
 import { AiOutlineApple } from "react-icons/ai";
 import { CartWidget } from "./CartWidget";
-import { Route, Link, Routes } from "react-router-dom";
-import { IphonePage } from "../../pages/IphonePage";
-import { Home } from "../../pages/Home";
-import { MacPage } from "../../pages/MacPage";
-import { IpadPage } from "../../pages/ipadPage/IpadPage";
+import { Link } from "react-router-dom";
 
 export const ComponentNavbar = () => {
   return (
@@ -48,17 +44,7 @@ export const ComponentNavbar = () => {
         </Navbar>
       </header>
 
-    <Routes>
-      
-      <Route path="/" element={<Home/>}/>
-
-      <Route path="/iPhone" element={<IphonePage/>}/>
-
-      <Route path="/Mac" element={<MacPage/>}/>
-
-      <Route path="/iPad" element={<IpadPage/>}/>
-
-      </Routes>
+    
     
     </>
 

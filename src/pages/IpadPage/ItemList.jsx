@@ -4,13 +4,12 @@ import { Item } from './Item'
 export const ItemList = ({productosFetch}) => {
 
   return (
-    <div className='container'>
-        <div className='d-flex justify-content- around'>
+    <div className='contenedorPadre'>
+      <div className='contenedor'>
             {productosFetch.map((producto) =>(
-                <Item key={producto.id} producto= {producto}/>
-
+                <Item key={producto.id} producto= {producto} />
             ))}
-        </div>
+      </div>
     </div>
   )
 

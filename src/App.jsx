@@ -12,9 +12,9 @@ export const App = () => {
       <ComponentNavbar />
       <Routes>
         <Route path="/iPad" element={<ItemListContainer/>}/>
-        <Route path="/" element={<ItemListContainer/>}/>
-        <Route path="/Mac" element={<ItemListContainer/>}/>
-        <Route path="/iPhone" element={<ItemListContainer/>}/>
+        <Route path="/" element={'home page'}/>
+        <Route path="/Mac" element={'mac page'}/>
+        <Route path="/iPhone" element={'iphone page'}/>
       </Routes>
     </BrowserRouter>
     

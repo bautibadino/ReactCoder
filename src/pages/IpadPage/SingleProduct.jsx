@@ -1,15 +1,28 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import {ipads} from '../../../public/data/Ipad.json'
 
 
 export const SingleProduct = () => {
 
-    const {productId} = useParams();
-    const product = ipads.find((ipad) => ipad.id === productId)
+    const [infoProduct, setInfoProduct] = useState([])
+    const {id} = useParams();
+
+    useEffect(() => {
+      fetch('../data/Ipad.json')
+        .then((res) => res.json())
+        .then((data) => setInfoProduct(data.find(ipad)) => ipad.id === id)
+        .catch((err) => console.log(err));
+    }, []);
+
     
-    console.log(product);
+    const {name, img, year, capacity, description, price} = ipad;
+
+    console.log(ipad)
+
     return (
-    <div>hola  </div>
+    <div>
+
+    </div>
   )
 }

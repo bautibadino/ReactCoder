@@ -9,7 +9,7 @@ export const ItemListContainer = () => {
       .then((data) => setProductosFetch(data.ipads))
       .catch((err) => console.log(err));
   }, []);
-  console.log(productosFetch)
+  // console.log(productosFetch)
   return (
     <>
       <ItemList productosFetch={productosFetch} />

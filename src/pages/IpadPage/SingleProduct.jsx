@@ -1,25 +1,21 @@
-import {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
-import {ipads} from '../../../public/data/Ipad.json'
-
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { products } from "../../../public/data/products";
 
 export const SingleProduct = () => {
-
-    const [infoProduct, setInfoProduct] = useState([])
-    const {id} = useParams();
+    const [infoProduct, setInfoProduct] = useState({});
+    const { id } = useParams();
 
     useEffect(() => {
-      fetch("../data/Ipad.json")
-          .then((res) => res.json())
-          .then((data) => setInfoProduct(data.find((ipad) => ipad.id === parseInt(id))))
-          .catch((err) => console.log(err));
-  }, []);
+        const promesa = new Promise((resolve, reject) => {
+            resolve(products);
+        });
+        promesa
+            .then((data) => setInfoProduct(data.find((ipad) => ipad.id === id)))
+            .catch((err) => console.log(err));
+    }, []);
 
-    console.log(infoProduct)
+    console.log(infoProduct);
 
-    return (
-    <div>
- 
-    </div>
-  )
-}
+    return <div></div>;
+};

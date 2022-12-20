@@ -11,7 +11,7 @@ export const SingleProduct = () => {
     useEffect(() => {
       fetch("../data/Ipad.json")
           .then((res) => res.json())
-          .then((data) => setInfoProduct(data))
+          .then((data) => setInfoProduct(data.find((ipad) => ipad.id === parseInt(id))))
           .catch((err) => console.log(err));
   }, []);
 

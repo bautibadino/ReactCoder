@@ -9,20 +9,17 @@ export const SingleProduct = () => {
     const {id} = useParams();
 
     useEffect(() => {
-      fetch('../data/Ipad.json')
-        .then((res) => res.json())
-        .then((data) => setInfoProduct(data.find(ipad)) => ipad.id === id)
-        .catch((err) => console.log(err));
-    }, []);
+      fetch("../data/Ipad.json")
+          .then((res) => res.json())
+          .then((data) => setInfoProduct(data))
+          .catch((err) => console.log(err));
+  }, []);
 
-    
-    const {name, img, year, capacity, description, price} = ipad;
-
-    console.log(ipad)
+    console.log(infoProduct)
 
     return (
     <div>
-
+ 
     </div>
   )
 }

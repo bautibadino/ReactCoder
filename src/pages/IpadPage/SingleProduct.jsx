@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../../../public/data/products";
+import { products } from "../../data/products";
 
 export const SingleProduct = () => {
     const [infoProduct, setInfoProduct] = useState({});
@@ -17,5 +17,5 @@ export const SingleProduct = () => {
 
     console.log(infoProduct);
 
-    return <div></div>;
+    return <div>hola {id}</div>;
 };

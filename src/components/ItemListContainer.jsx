@@ -1,7 +1,7 @@
   import React, { useEffect, useState } from 'react';
-  import {ItemList} from '../../pages/IpadPage/ItemList'
-  import { products } from '../../../public/data/products';
-
+  import { ItemList } from './ItemList'; 
+  import { products } from '../data/products';
+  import { getProducts } from '../data/products';
   export const ItemListContainer = () => {
     const [productosFetch, setProductosFetch] = useState([]);
 
@@ -12,7 +12,12 @@
         .then((result) => setProductosFetch(result) )
     }, [])
     
-    console.log(productosFetch)
+    useEffect(() => {
+      getProducts().then((products) => {
+        setProductosFetch(products);
+      });
+    }, [])
+    
     return (
       <>
         <ItemList productosFetch={productosFetch} />

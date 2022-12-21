@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar } from "react-bootstrap";
 import { AiOutlineApple } from "react-icons/ai";
-import { CartWidget } from "./CartWidget";
+import { CartWidget } from "../CartWidget";
 import { Link } from "react-router-dom";
 
 export const ComponentNavbar = () => {
@@ -29,13 +29,13 @@ export const ComponentNavbar = () => {
             <Link to="/"  className="p-2 text-white text-decoration-none">
               Inicio
             </Link>
-            <Link to="/iPhone" className="p-2 text-white text-decoration-none ">
+            <Link to="/categorias/iPhone" className="p-2 text-white text-decoration-none ">
               iPhone
             </Link>
-            <Link to="/Mac" className="p-2 text-white text-decoration-none ">
+            <Link to="/categorias/Mac" className="p-2 text-white text-decoration-none ">
               Mac
             </Link>
-            <Link to="/iPad" className="p-2 text-white text-decoration-none  ">
+            <Link to="/categorias/iPad" className="p-2 text-white text-decoration-none  ">
               iPad
             </Link>
           </div>

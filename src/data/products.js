@@ -27,3 +27,12 @@ export const products = [
       price: 600,
   },
 ];
+
+export const getProducts = () => {
+    return new Promise((res, rej) => {
+      setTimeout(() => {
+        res(products);
+        
+      }, 2000);
+    });
+  }

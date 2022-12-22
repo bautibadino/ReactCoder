@@ -14,11 +14,9 @@ export const App = () => {
     <BrowserRouter>
       <ComponentNavbar />
       <Routes>
-        <Route path="/categorias/iPad" element={<ItemListContainer/>}/>
-        <Route path="/categorias/iPad/:id" element={<SingleProduct/>}/>
-        <Route path="/" element={'home page'}/>
-        <Route path="/categorias/Mac" element={'mac page'}/>
-        <Route path="/categorias/iPhone" element={'iphone page'}/>
+        <Route path="/" element={<ItemListContainer/>}/>
+        <Route path="/categorias/:id" element={<ItemListContainer/>}/>
+        <Route path="/detalle/:id" element={<SingleProduct/>}/>
       </Routes>
     </BrowserRouter>
     
